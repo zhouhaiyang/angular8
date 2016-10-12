@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en" ng-app="appModule">
+﻿<!doctype html>
+<html lang="en" ng-app="appModule">//当添加这个ng-app="xx"时，它会直接先执行模块里的run方法。1
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
@@ -15,7 +15,7 @@
 <script>
     var app = angular.module('appModule',[]);
     app.run(function ($rootScope) {
-        $rootScope.flag = true;
+        $rootScope.flag = true;//这个flag必须绑定在根作用域上，因为代码从上往下执行，如果绑定到当前作用域上，ng-if为false时，就不会加载出来。2
         $rootScope.remove = function () {
             $rootScope.flag = false;
         }
