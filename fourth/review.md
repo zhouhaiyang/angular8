@@ -1,4 +1,4 @@
-## npm node package manager 管理后台包的
+﻿## npm node package manager 管理后台包的
 ## bower 管理前端包的
 - 安装bower 
 ```
